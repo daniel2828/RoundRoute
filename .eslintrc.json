@@ -10,6 +10,8 @@
     "jest/globals": true
   },
   "rules": {
+    "linebreak-style": 0,
+
     "no-multi-assign": 0,
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": [

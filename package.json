@@ -21,7 +21,8 @@
     "typeform"
   ],
   "dependencies": {
-    "@typeform/embed": "^0.10.0"
+    "@typeform/embed": "^0.10.0",
+    "node-sass": "^4.14.1"
   },
   "peerDependencies": {
     "react": "^16.0.0",

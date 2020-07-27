@@ -1,9 +1,11 @@
 import React from 'react';
 import { ReactTypeformEmbed } from '../components';
+import './examples.scss';
 
 class ExamplePopup extends React.Component {
   constructor(props) {
     super(props);
+
     this.openForm = this.openForm.bind(this);
   }
 
@@ -17,7 +19,7 @@ class ExamplePopup extends React.Component {
         <ReactTypeformEmbed
           popup
           autoOpen={false}
-          url="https://demo.typeform.com/to/njdbt5"
+          url={this.props.url}
           hideHeaders
           hideFooter
           buttonText="Go!"
@@ -26,8 +28,12 @@ class ExamplePopup extends React.Component {
             this.typeformEmbed = tf;
           }}
         />
-        <button className="btn" onClick={this.openForm} style={{ cursor: 'pointer' }}>
-          Click to open the popup!
+        <button
+          className="btn btn-route-item"
+          onClick={this.openForm}
+          style={{ cursor: 'pointer' }}
+        >
+          {this.props.name}
         </button>
       </div>
     );
