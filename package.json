@@ -30,7 +30,12 @@
   },
   "homepage": "http://alexgarces.github.io/react-typeform-embed/",
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
     "build:docs": "react-scripts build",
     "build:css": "cpx \"./src/components/**/*.css\" ./lib",
     "build:lib": "npm run build:commonjs && npm run build:css",
