@@ -29,7 +29,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "homepage": "http://alexgarces.github.io/react-typeform-embed/",
+  "homepage": "https://round-route.herokuapp.com/",
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
