@@ -56,7 +56,7 @@ hr {
 
 .Examples__widget-section,
 .Examples__popup-section {
-  display: block;
+  display: flex;
   position: relative;
 }
 

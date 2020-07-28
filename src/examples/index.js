@@ -3,7 +3,9 @@ import React from 'react';
 // import ExampleWidget from './ExampleWidget';
 
 import ExamplePopup from './ExamplePopup';
-
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import MapContainer from '../components/Maps/MapContainer';
 class Examples extends React.Component {
   constructor(props) {
     super(props);
@@ -23,17 +25,21 @@ class Examples extends React.Component {
   }
 
   render() {
+    const mapStyles = {
+      width: '80%',
+      height: '80%'
+    };
     return (
-      <div className="Examples">
-        <div className="container">
-          <h1>RoundRoute</h1>
-          <p>Ruta de prueba</p>
-
-          <h2>Primera zona</h2>
-          <div className="row">
-            <div className="Examples__popup-section col-6">{this.renderRoutes}</div>
+      <div>
+        <Header />
+        <div className="Examples">
+          <div className="container">
+            <h2>Primera zona</h2>
+            <div className="Examples__popup-section row">{this.renderRoutes}</div>
           </div>
         </div>
+        <MapContainer />
+        <Footer />
       </div>
     );
   }

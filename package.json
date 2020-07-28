@@ -21,7 +21,10 @@
     "typeform"
   ],
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@typeform/embed": "^0.10.0",
+    "google-maps-react": "^2.0.6",
     "node-sass": "^4.14.1",
     "serve": "^11.3.2"
   },
