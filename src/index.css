@@ -54,12 +54,6 @@ hr {
   padding: 60px 0 80px;
 }
 
-.Examples__widget-section,
-.Examples__popup-section {
-  display: inline-block;
-  justify-content: center;
-}
-
 .Examples__widget-section {
   height: 400px;
 }

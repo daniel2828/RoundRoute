@@ -11,7 +11,11 @@ class Examples extends React.Component {
     super(props);
     this.openForm = this.openForm.bind(this);
     this.semi_routes = [
-      { name: 'Barrio de Vegueta', url: 'https://roundroute.typeform.com/to/JeesrIPD', lat: '' },
+      {
+        name: 'Plaza de San Antonio Abad',
+        url: 'https://roundroute.typeform.com/to/JeesrIPD',
+        lat: ''
+      },
       { name: 'Plaza del pilar nuevo', url: 'https://roundroute.typeform.com/to/Z3EDaaVB' },
       { name: 'La Casa de Colón', url: 'https://roundroute.typeform.com/to/xB5UaoCQ' },
       {

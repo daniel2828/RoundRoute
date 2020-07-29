@@ -33,10 +33,10 @@ class ExamplePopup extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>{this.props.name}</h2>
+      <div className="full-item ">
+        <h2 className="title-item ">{this.props.name}</h2>
         <div className="ExamplePopup row" disabled={this.state.isDisabled}>
-          <div className="col-3 ">
+          <div className="col-3">
             <RoomIcon className="map-icon" fontSize="large" color={this.state.mapColor} />
           </div>
 

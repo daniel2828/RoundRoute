@@ -34,6 +34,11 @@
     padding: 0px;
   }
 }
+.title-item {
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-size: 25px;
+}
 :enabled {
   border: 2px solid black;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -45,4 +50,6 @@
   margin-left: 5px;
   margin-bottom: 0px;
   padding: 0px;
+}
+.full-item {
 }
