@@ -7,14 +7,28 @@
   margin-bottom: 10px;
 }
 .CheckCircleIcon {
-  width: 100px !important;
   margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 0px;
 }
 .ExamplePopup {
   float: left;
   display: flex;
+  justify-content: center;
+  background-color: #007e8a;
+  padding-top: 10px;
+  margin-top: 5px;
+  margin-left: 0px;
+  width: 100% !important;
+  border-radius: 14px 14px 14px 14px;
+  -moz-border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+  border: 1px solid #000000;
 }
-.glyphicon-ok-circle {
-  width: 30px !important;
-  height: 30px;
+.ExamplePopup:hover {
+  background-color: red;
+}
+.map-icon {
+  margin-top: 5px;
+  margin-left: 5px;
 }

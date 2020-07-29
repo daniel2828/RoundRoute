@@ -56,8 +56,8 @@ hr {
 
 .Examples__widget-section,
 .Examples__popup-section {
-  display: flex;
-  position: relative;
+  display: inline-block;
+  justify-content: center;
 }
 
 .Examples__widget-section {

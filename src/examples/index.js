@@ -15,27 +15,48 @@ class Examples extends React.Component {
       { name: 'Plaza del pilar nuevo', url: 'https://roundroute.typeform.com/to/Z3EDaaVB' }
     ];
     this.renderRoutes = [];
+    let i = 0;
+    this.enableDisableOption = this.enableDisableOption.bind(this);
+    this.childReferences = [];
+    let reference;
     this.semi_routes.forEach(element => {
-      this.renderRoutes.push(<ExamplePopup name={element.name} url={element.url} />);
+      reference = React.createRef();
+      this.childReferences.push(reference);
+      this.renderRoutes.push(
+        <ExamplePopup
+          id={i}
+          name={element.name}
+          url={element.url}
+          enableCall={this.enableDisableOption}
+          key={i}
+          ref={reference}
+        />
+      );
+      i++;
     });
   }
-
+  componentDidMount() {
+    this.childReferences[0].current.enableOption();
+  }
   openForm() {
     this.typeformEmbed.typeform.open();
   }
+  enableDisableOption(keyElement) {
+    // Enable next option
+    console.log(this.childReferences.length);
+    if (keyElement < this.childReferences.length) {
+      this.childReferences[keyElement].current.enableOption();
+    }
+  }
 
   render() {
-    const mapStyles = {
-      width: '80%',
-      height: '80%'
-    };
     return (
       <div>
         <Header />
         <div className="Examples">
           <div className="container">
             <h2>Primera zona</h2>
-            <div className="Examples__popup-section row">{this.renderRoutes}</div>
+            <div className="Examples__popup-section">{this.renderRoutes}</div>
           </div>
         </div>
         <MapContainer />
