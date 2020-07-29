@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 const mapStyles = {
   margin: '10%',
   width: '80%',
@@ -13,10 +13,15 @@ export class MapContainer extends Component {
         zoom={14}
         style={mapStyles}
         initialCenter={{
-          lat: -1.2884,
-          lng: 36.8233
+          lat: 28.10062,
+          lng: -15.414799
         }}
-      />
+      >
+        <Marker
+          onClick={this.onMarkerClick}
+          name={'Plaza San Antonio Abad, 4-2, 35001 Las Palmas de Gran Canaria, Las Palmas, España'}
+        />
+      </Map>
     );
   }
 }

@@ -11,8 +11,15 @@ class Examples extends React.Component {
     super(props);
     this.openForm = this.openForm.bind(this);
     this.semi_routes = [
-      { name: 'Barrio de Vegueta', url: 'https://roundroute.typeform.com/to/JeesrIPD' },
-      { name: 'Plaza del pilar nuevo', url: 'https://roundroute.typeform.com/to/Z3EDaaVB' }
+      { name: 'Barrio de Vegueta', url: 'https://roundroute.typeform.com/to/JeesrIPD', lat: '' },
+      { name: 'Plaza del pilar nuevo', url: 'https://roundroute.typeform.com/to/Z3EDaaVB' },
+      { name: 'La Casa de Colón', url: 'https://roundroute.typeform.com/to/xB5UaoCQ' },
+      {
+        name: 'Antiguo Hospital de San Martín',
+        url: 'https://roundroute.typeform.com/to/QJlEKgfB'
+      },
+      { name: 'La Plaza de Santa Ana', url: 'https://roundroute.typeform.com/to/O4xmZCom' },
+      { name: 'Museo Diocesano de Arte Sacro', url: 'https://roundroute.typeform.com/to/fU86sS7y' }
     ];
     this.renderRoutes = [];
     let i = 0;
@@ -55,12 +62,10 @@ class Examples extends React.Component {
         <Header />
         <div className="Examples">
           <div className="container">
-            <h2>Primera zona</h2>
             <div className="Examples__popup-section">{this.renderRoutes}</div>
           </div>
         </div>
         <MapContainer />
-        <Footer />
       </div>
     );
   }

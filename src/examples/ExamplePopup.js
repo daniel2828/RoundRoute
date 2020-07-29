@@ -26,7 +26,6 @@ class ExamplePopup extends React.Component {
   closeForm() {
     this.setState({
       iconColor: 'primary',
-
       isDisabled: true
     });
     this.props.enableCall(this.props.id + 1);
@@ -34,42 +33,45 @@ class ExamplePopup extends React.Component {
 
   render() {
     return (
-      <div className="ExamplePopup row">
-        <div className="col-2 ">
-          <RoomIcon className="map-icon" fontSize="large" color={this.state.mapColor} />
-        </div>
+      <div>
+        <h2>{this.props.name}</h2>
+        <div className="ExamplePopup row" disabled={this.state.isDisabled}>
+          <div className="col-3 ">
+            <RoomIcon className="map-icon" fontSize="large" color={this.state.mapColor} />
+          </div>
 
-        <div className="col-6 ">
-          <ReactTypeformEmbed
-            popup
-            autoOpen={false}
-            url={this.props.url}
-            hideHeaders
-            hideFooter
-            buttonText="Go!"
-            style={{ top: 100 }}
-            ref={tf => {
-              this.typeformEmbed = tf;
-            }}
-            onSubmit={this.closeForm}
-          />
-          <button
-            className="btn btn-route-item"
-            onClick={this.openForm}
-            style={{ cursor: 'pointer' }}
-            disabled={this.state.isDisabled}
-          >
-            {this.props.name}
-          </button>
+          <div className="col-5 ">
+            <ReactTypeformEmbed
+              popup
+              autoOpen={false}
+              url={this.props.url}
+              hideHeaders
+              hideFooter
+              buttonText="Go!"
+              style={{ top: 100 }}
+              ref={tf => {
+                this.typeformEmbed = tf;
+              }}
+              onSubmit={this.closeForm}
+            />
+            <button
+              className="btn btn-route-item"
+              onClick={this.openForm}
+              style={{ cursor: 'pointer' }}
+              disabled={this.state.isDisabled}
+            >
+              Comenzar
+            </button>
+          </div>
+          <div className="col-4">
+            <CheckCircleIcon
+              className="CheckCircleIcon"
+              fontSize="large"
+              color={this.state.iconColor}
+            />
+          </div>
+          <div className="col-2"></div>
         </div>
-        <div className="col-2">
-          <CheckCircleIcon
-            className="CheckCircleIcon"
-            fontSize="large"
-            color={this.state.iconColor}
-          />
-        </div>
-        <div className="col-2"></div>
       </div>
     );
   }
