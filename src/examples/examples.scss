@@ -17,7 +17,6 @@
   float: left;
   display: flex;
   justify-content: center;
-  background-color: #007e8a;
   padding-top: 10px;
   margin-top: 5px;
   margin-bottom: 30px;
@@ -33,6 +32,13 @@
     margin-top: 0px;
     padding: 0px;
   }
+}
+.modal-content {
+  min-height: 500px;
+}
+.map-modal {
+  min-height: 400px;
+  height: auto !important;
 }
 .title-item {
   margin-bottom: 10px;
@@ -51,5 +57,13 @@
   margin-bottom: 0px;
   padding: 0px;
 }
-.full-item {
+.separator {
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px black solid;
+  background-color: #00a9b9;
 }

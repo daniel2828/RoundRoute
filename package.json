@@ -6,9 +6,8 @@
     "node": ">=4.0.0"
   },
   "author": {
-    "name": "Alex Garces",
-    "email": "info@alexgarces.com",
-    "url": "https://alexgarces.com"
+    "name": "Danie Tendero García",
+    "email": "danieltendero@hotmail.es"
   },
   "files": [
     "lib"
@@ -24,8 +23,10 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@typeform/embed": "^0.10.0",
+    "bootstrap": "^4.5.0",
     "google-maps-react": "^2.0.6",
     "node-sass": "^4.14.1",
+    "react-bootstrap": "^1.3.0",
     "serve": "^11.3.2"
   },
   "peerDependencies": {

@@ -69,7 +69,6 @@ class Examples extends React.Component {
             <div className="Examples__popup-section">{this.renderRoutes}</div>
           </div>
         </div>
-        <MapContainer />
       </div>
     );
   }
